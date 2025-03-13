@@ -1,10 +1,9 @@
-import Footer from "./components/Footer/Footer";
+import MainLayout from "./components/layout/MainLayout";
 
 function App() {
   return (
     <>
-      <div className="text-4xl">Hello</div>
-      <Footer />
+      <MainLayout />
     </>
   );
 }
