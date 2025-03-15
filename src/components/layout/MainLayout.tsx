@@ -1,8 +1,9 @@
-import { Breadcrumb, Layout, Menu } from "antd";
+import { Layout, Menu } from "antd";
 const { Header, Content } = Layout;
 import brandImg from "../../assets/images/brandlogo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import CustomFooter from "../CustomFooter/CustomFooter";
+import { Outlet } from "react-router-dom";
 
 const menuItems = [
   { key: "1", label: "Home" },
@@ -40,18 +41,18 @@ const MainLayout = () => {
         />
       </Header>
       <Content style={{ padding: "0 48px" }}>
-        <Breadcrumb style={{ margin: "16px 0" }}>
+        {/* <Breadcrumb style={{ margin: "16px 0" }}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>List</Breadcrumb.Item>
           <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb>
+        </Breadcrumb> */}
         <div
           style={{
             minHeight: 280,
             padding: 24,
           }}
         >
-          Content
+          <Outlet />
         </div>
       </Content>
       <CustomFooter />
