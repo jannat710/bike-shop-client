@@ -1,7 +1,10 @@
 import { Breadcrumb, Layout, Menu } from "antd";
-const { Header, Content, Footer } = Layout;
+const { Header, Content } = Layout;
+import brandImg from "../../assets/images/brandlogo.png";
+import { IoIosArrowDown } from "react-icons/io";
+import CustomFooter from "../CustomFooter/CustomFooter";
 
-const items = [
+const menuItems = [
   { key: "1", label: "Home" },
   { key: "2", label: "About Us" },
   { key: "3", label: "Products" },
@@ -9,16 +12,30 @@ const items = [
   { key: "5", label: "Register" },
 ];
 
+const items = menuItems.map((item) => ({
+  key: item.key,
+  label: (
+    <span className="flex items-center">
+      {item.label} <IoIosArrowDown className="ml-2" />
+    </span>
+  ),
+}));
 const MainLayout = () => {
   return (
-    <Layout style={{ height: "100vh" }}>
-      <Header style={{ display: "flex", alignItems: "center" }}>
-        <div className="demo-logo" />
+    <Layout className="bg-secondary min-h-screen">
+      <Header
+        className="bg-transparent border-b-2"
+        style={{ display: "flex", alignItems: "center" }}
+      >
+        <div>
+          <img style={{ width: "120px" }} src={brandImg} alt="Brand Logo" />
+        </div>
         <Menu
           theme="dark"
           mode="horizontal"
           defaultSelectedKeys={["2"]}
           items={items}
+          className="bg-transparent"
           style={{ flex: 1, minWidth: 0 }}
         />
       </Header>
@@ -37,9 +54,7 @@ const MainLayout = () => {
           Content
         </div>
       </Content>
-      <Footer style={{ textAlign: "center" }}>
-        Ant Design ©{new Date().getFullYear()} Created by Ant UED
-      </Footer>
+      <CustomFooter />
     </Layout>
   );
 };
