@@ -3,14 +3,14 @@ const { Header, Content } = Layout;
 import brandImg from "../../assets/images/brandlogo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import CustomFooter from "../CustomFooter/CustomFooter";
-import { Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 
 const menuItems = [
-  { key: "1", label: "Home" },
-  { key: "2", label: "About Us" },
-  { key: "3", label: "Products" },
-  { key: "4", label: "Login" },
-  { key: "5", label: "Register" },
+  { key: "Home", label: <NavLink to="/">Home</NavLink> },
+  { key: "About Us", label: <NavLink to="/about">About Us</NavLink> },
+  { key: "Products", label: <NavLink to="/products">Products</NavLink> },
+  { key: "Login", label: <NavLink to="/login">Login</NavLink> },
+  { key: "Register", label: <NavLink to="/register">Register</NavLink> },
 ];
 
 const items = menuItems.map((item) => ({

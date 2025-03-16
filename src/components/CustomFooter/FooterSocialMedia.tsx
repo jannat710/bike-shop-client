@@ -1,35 +1,35 @@
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGooglePlusSquare } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { Space, Typography } from "antd";
+
+const { Text } = Typography;
+
 const FooterSocialMedia = () => {
   return (
-    <div className="flex items-center space-x-3 justify-center">
-      <p className="font-bold hidden sm:block">SOCIAL MEDIA</p>
-      <a
-        href="https://www.facebook.com/jannatulfee"
-        target="_blank"
-        rel="noopener noreferrer"
+    <Space
+      size="middle"
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Text className="text-white font-bold hidden sm:block">SOCIAL MEDIA</Text>
+      <Link
+        to="https://www.facebook.com/jannatulfee"
         className="hover:text-primary"
       >
         <FaFacebookSquare className="text-2xl " />
-      </a>
-      <a
-        href="https://x.com/jannatul_zz"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-primary"
-      >
+      </Link>
+      <Link to="https://x.com/jannatul_zz" className="hover:text-primary">
         <FaSquareXTwitter className="text-2xl" />
-      </a>
-      <a
-        href="mailto:jannatul0040@gmail.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="hover:text-primary"
-      >
+      </Link>
+      <Link to="mailto:jannatul0040@gmail.com" className="hover:text-primary">
         <FaGooglePlusSquare className="text-2xl" />
-      </a>
-    </div>
+      </Link>
+    </Space>
   );
 };
 
