@@ -1,7 +1,7 @@
 import { Layout, Menu } from "antd";
 const { Header, Content } = Layout;
 import brandImg from "../../assets/images/brandlogo.png";
-import { IoIosArrowDown } from "react-icons/io";
+import { AiFillCaretDown } from "react-icons/ai";
 import CustomFooter from "../CustomFooter/CustomFooter";
 import { NavLink, Outlet } from "react-router-dom";
 
@@ -16,20 +16,17 @@ const menuItems = [
 const items = menuItems.map((item) => ({
   key: item.key,
   label: (
-    <span className="flex items-center">
-      {item.label} <IoIosArrowDown className="ml-2" />
+    <span className="flex items-center justify-center">
+      {item.label} <AiFillCaretDown className="ml-2" />
     </span>
   ),
 }));
 const MainLayout = () => {
   return (
     <Layout className="bg-secondary min-h-screen">
-      <Header
-        className="bg-transparent border-b-2"
-        style={{ display: "flex", alignItems: "center" }}
-      >
+      <Header className="bg-transparent border-b-2 flex items-center">
         <div>
-          <img style={{ width: "120px" }} src={brandImg} alt="Brand Logo" />
+          <img className="w-32" src={brandImg} alt="Brand Logo" />
         </div>
         <Menu
           theme="dark"
@@ -40,18 +37,8 @@ const MainLayout = () => {
           style={{ flex: 1, minWidth: 0 }}
         />
       </Header>
-      <Content style={{ padding: "0 48px" }}>
-        {/* <Breadcrumb style={{ margin: "16px 0" }}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
-          <Breadcrumb.Item>List</Breadcrumb.Item>
-          <Breadcrumb.Item>App</Breadcrumb.Item>
-        </Breadcrumb> */}
-        <div
-          style={{
-            minHeight: 280,
-            padding: 24,
-          }}
-        >
+      <Content className="px-12">
+        <div className="p-6 min-h-[360px]">
           <Outlet />
         </div>
       </Content>

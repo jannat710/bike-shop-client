@@ -5,3 +5,20 @@
 /* body {
   background-color: #6b06e6;
 } */
+
+.ant-btn,
+.ant-input,
+.ant-card,
+.ant-select {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0%;
+}
+
+/*  */
+.contentStyle {
+  height: 80vh;
+}
+body {
+  @apply text-white;
+}

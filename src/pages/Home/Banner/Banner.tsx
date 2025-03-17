@@ -1,9 +1,4 @@
-import React from "react";
 import { Button, Carousel } from "antd";
-
-const contentStyle: React.CSSProperties = {
-  height: "80vh",
-};
 
 const banners = [
   {
@@ -30,67 +25,27 @@ const banners = [
 
 const Banner = () => {
   return (
-    <div style={{ position: "relative" }}>
-      <Carousel autoplay autoplaySpeed={1000} dots={false} effect="fade" arrows>
+    <div className="relative">
+      <Carousel autoplay autoplaySpeed={3000} dots={false} effect="fade" arrows>
         {banners.map((banner) => (
           <div key={banner.id}>
-            <h3 style={contentStyle}>
+            <h3 className="contentStyle">
               <img
                 src={banner.imageUrl}
                 alt={banner.alt}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                className="w-full h-full object-cover"
               />
             </h3>
 
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                backgroundColor: "rgba(0, 0, 0, 0.68)",
-              }}
-            />
-            <div
-              style={{
-                position: "absolute",
-                top: "20%",
-                left: "10%",
-                color: "white",
-                fontSize: "16px",
-                fontWeight: "bold",
-                textTransform: "uppercase",
-              }}
-            >
-              <p
-                style={{
-                  color: "white",
-                  fontSize: "16px",
-                  fontWeight: "bold",
-                  textTransform: "uppercase",
-                }}
-              >
-                Ride and live today
-              </p>
-              <h1
-                style={{
-                  textTransform: "uppercase",
-                  fontSize: "60px",
-                  fontWeight: "bold",
-                }}
-              >
+            <div className="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-60" />
+            <div className="absolute top-[20%] left-[10%] text-white text-base font-bold uppercase">
+              <p className="">Ride and live today</p>
+              <h1 className="text-6xl py-4">
                 We ride<br></br> together
               </h1>
               <Button
+                className="px-10 py-6 text-base uppercase font-bold"
                 type="primary"
-                style={{
-                  textTransform: "uppercase",
-                  fontSize: "16px",
-                  fontWeight: "bold",
-                  padding: "20px 10px",
-                  borderRadius: "0px",
-                }}
               >
                 Explore Our Rides
               </Button>

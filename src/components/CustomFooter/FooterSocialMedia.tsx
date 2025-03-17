@@ -10,11 +10,7 @@ const FooterSocialMedia = () => {
   return (
     <Space
       size="middle"
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
+      className="flex justify-center lg:justify-end items-center"
     >
       <Text className="text-white font-bold hidden sm:block">SOCIAL MEDIA</Text>
       <Link

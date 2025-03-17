@@ -7,10 +7,8 @@ const { Footer } = Layout;
 
 const CustomFooter = () => {
   return (
-    <Footer
-      style={{ backgroundColor: "#000", color: "#fff", padding: "64px 0px" }}
-    >
-      <Row justify="space-between" align="middle">
+    <Footer className="bg-black py-16 text-white">
+      <Row className="" align="middle">
         <Col xs={24} sm={8}>
           <FooterCopyright />
         </Col>

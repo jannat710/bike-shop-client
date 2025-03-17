@@ -4,15 +4,7 @@ const { Text } = Typography;
 
 const FooterCopyright = () => {
   return (
-    <Text
-      style={{
-        textAlign: "center",
-        color: "#fff",
-        opacity: 0.7,
-        display: "block",
-        width: "100%",
-      }}
-    >
+    <Text className="text-white opacity-70 w-full flex justify-center lg:justify-start">
       Copyright © {new Date().getFullYear()}. All Rights Reserved.
     </Text>
   );

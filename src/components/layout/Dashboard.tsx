@@ -49,14 +49,9 @@ const Dashboard = () => {
         />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0 }} />
-        <Content style={{ margin: "24px 16px 0" }}>
-          <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-            }}
-          >
+        <Header />
+        <Content>
+          <div className="p-6 min-h-[360px]">
             <Outlet />
           </div>
         </Content>
