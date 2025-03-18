@@ -2,9 +2,7 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";
 import { FaGooglePlusSquare } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { Space, Typography } from "antd";
-
-const { Text } = Typography;
+import { Space } from "antd";
 
 const FooterSocialMedia = () => {
   return (
@@ -12,7 +10,7 @@ const FooterSocialMedia = () => {
       size="middle"
       className="flex justify-center lg:justify-end items-center"
     >
-      <Text className="text-white font-bold hidden sm:block">SOCIAL MEDIA</Text>
+      <p className="text-white font-bold hidden sm:block">SOCIAL MEDIA</p>
       <Link
         to="https://www.facebook.com/jannatulfee"
         className="hover:text-primary"
