@@ -44,8 +44,9 @@ const Banner = () => {
                 We ride<br></br> together
               </h1>
               <Button
-                className="px-10 py-6 text-base uppercase font-bold"
+                className="uppercase font-bold"
                 type="primary"
+                size="large"
               >
                 Explore Our Rides
               </Button>

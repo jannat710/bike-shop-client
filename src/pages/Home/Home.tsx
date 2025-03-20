@@ -3,10 +3,10 @@ import Testimonials from "./Testimonials/Testimonials";
 
 const Home = () => {
   return (
-    <div>
+    <>
       <Banner />
       <Testimonials />
-    </div>
+    </>
   );
 };
 
