@@ -8,6 +8,7 @@ import Home from "../pages/Home/Home";
 import Dashboard from "../components/layout/Dashboard";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import { adminPaths } from "./admin.routes";
+import { userPaths } from "./user.routes";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,11 @@ const router = createBrowserRouter([
     path: "/admin",
     element: <Dashboard />,
     children: adminPaths,
+  },
+  {
+    path: "/user",
+    element: <Dashboard />,
+    children: userPaths,
   },
 ]);
 

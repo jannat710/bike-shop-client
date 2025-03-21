@@ -20,4 +20,12 @@ export const adminPaths = [
     path: "manage-orders",
     element: <ManageOrders />,
   },
+  {
+    path: "add-products",
+    element: <ManageProducts />,
+  },
+  {
+    path: "edit-product/:id",
+    element: <ManageOrders />,
+  },
 ];
