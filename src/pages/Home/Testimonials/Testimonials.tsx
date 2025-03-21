@@ -44,7 +44,7 @@ const Testimonials = () => {
             <div key={index}>
               <div className="py-24 flex items-center justify-center text-white bg-black bg-opacity-60">
                 <div className="">
-                  <h1 className="text-base max-w-2xl italic">
+                  <h1 className="text-base max-w-2xl italic font-normal">
                     {review.review}
                   </h1>
                   <div className="flex justify-center items-center gap-4 pt-4">
@@ -56,8 +56,10 @@ const Testimonials = () => {
                       />
                     </div>
                     <div className="text-left">
-                      <p>{review.name}</p>
-                      <p className="text-primary">{review.designation}</p>
+                      <p className="font-semibold">{review.name}</p>
+                      <p className="text-primary font-medium">
+                        {review.designation}
+                      </p>
                     </div>
                   </div>
                 </div>
