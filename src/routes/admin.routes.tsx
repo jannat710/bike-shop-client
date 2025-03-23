@@ -5,26 +5,37 @@ import ManageUsers from "../pages/admin/ManageUsers/ManageUsers";
 
 export const adminPaths = [
   {
-    path: "admin-dashboard",
+    name: "Dashboard",
+    path: "dashboard",
     element: <AdminDashboard />,
   },
   {
-    path: "manage-users",
-    element: <ManageUsers />,
+    name: "Manage Users",
+    children: [
+      {
+        name: "Manage Users",
+        path: "manage-users",
+        element: <ManageUsers />,
+      },
+    ],
   },
   {
+    name: "Manage Products",
     path: "manage-products",
     element: <ManageProducts />,
   },
   {
+    name: "Manage Orders",
     path: "manage-orders",
     element: <ManageOrders />,
   },
   {
+    name: "Add Product",
     path: "add-products",
     element: <ManageProducts />,
   },
   {
+    name: "Edit Product",
     path: "edit-product/:id",
     element: <ManageOrders />,
   },
